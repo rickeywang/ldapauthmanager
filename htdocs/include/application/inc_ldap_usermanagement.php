@@ -179,7 +179,7 @@ class ldap_auth_manage_user
 			// set values
 			$this->data["uid"]		= $this->obj_ldap->data[0]["uid"][0];
 			$this->data["sn"]		= $this->obj_ldap->data[0]["sn"][0];
-			$this->data["gn"]		= $this->obj_ldap->data[0]["givenname"][0];
+			$this->data["gn"]		= $this->obj_ldap->data[0]["gn"][0];
 			$this->data["uidnumber"]	= $this->obj_ldap->data[0]["uidnumber"][0];
 			$this->data["gidnumber"]	= $this->obj_ldap->data[0]["gidnumber"][0];
 			$this->data["loginshell"]	= $this->obj_ldap->data[0]["loginshell"][0];
