@@ -31,11 +31,10 @@ class page_output
 	{
 		/////////////////////////
 	
-		print "<h3>USER LOGOUT:</h3>";
-		print "<p>Click below to logout. Remember: You must never leave a logged in session unattended!</p>";
+		print "<h3>USER LOGOUT</h3>";
 	
 		print "<form id=\"logoutForm\" method=\"POST\" action=\"user/logout-process.php\">
-		<input type=\"submit\" value=\"Logout\">
+		<input type=\"submit\" value=\"Click here if you are not redirected\">
 		</form>";
 		
 		print "<script type=\"text/javascript\">
