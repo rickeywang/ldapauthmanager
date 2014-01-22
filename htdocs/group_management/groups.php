@@ -55,7 +55,7 @@ class page_output
 		$structure["fieldname"] 	= "hide_user_group_maps";
 		$structure["type"]		= "checkbox";
 		$structure["defaultvalue"]	= "on";
-		$structure["options"]["label"]	= "Hide groups that only exist to match with users";
+		$structure["options"]["label"]	= "Hide groups that only exisit to match with users";
 		$this->obj_table->add_filter($structure);
 
 		// load options
