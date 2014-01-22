@@ -401,35 +401,40 @@ class ldap_auth_manage_user
 		/*
 			Check if a group exists with the provided GID, if it doesn't, then
 			we should create it.
+			
+			configuration option "create_user_groups" may be used to disable this feature
+			
 		*/
-
-		$obj_group	= New ldap_auth_manage_group;
-		$obj_group->id	= $this->data["gidnumber"];
-
-		if ($obj_group->verify_id())
-		{
-			// group exists
-			log_write("debug", "ldap_auth_manage_user", "A group with ID of ". $obj_group->id ." already exists, will not create another");
-		}
-		else
-		{
-			// no group exists.
-			// create a new group
 		
+		if ($config["create_user_groups"]){
+
 			$obj_group	= New ldap_auth_manage_group;
-
-			$obj_group->data["cn"]			= $this->data["uid"];
-			$obj_group->data["gidnumber"]		= $this->data["gidnumber"];
-
-			if (!$obj_group->update())
-			{	
-				log_write("debug", "ldap_auth_manage_user", "An error occured whilst attempting to create a group for a new user");
-				return 0;
+			$obj_group->id	= $this->data["gidnumber"];
+	
+			if ($obj_group->verify_id())
+			{
+				// group exists
+				log_write("debug", "ldap_auth_manage_user", "A group with ID of ". $obj_group->id ." already exists, will not create another");
 			}
-		}
+			else
+			{
+				// no group exists.
+				// create a new group
+			
+				$obj_group	= New ldap_auth_manage_group;
+	
+				$obj_group->data["cn"]			= $this->data["uid"];
+				$obj_group->data["gidnumber"]		= $this->data["gidnumber"];
+	
+				if (!$obj_group->update())
+				{	
+					log_write("debug", "ldap_auth_manage_user", "An error occured whilst attempting to create a group for a new user");
+					return 0;
+				}
+			} // success
 
-
-		// success
+		} // end user group creation
+		
 		return 1;
 
 	} // end of create()
