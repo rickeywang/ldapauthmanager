@@ -50,10 +50,6 @@ if (user_permissions_get('ldapadmins'))
 		$obj_user->data["gidnumber"]		= security_form_input_predefined("int", "gidnumber", 3, "");
 		$obj_user->data["loginshell"]		= security_form_input_predefined("any", "loginshell", 1, "");
 		$obj_user->data["homedirectory"]	= security_form_input_predefined("any", "homedirectory", 1, "");
-		$obj_user->data["mail"]			= security_form_input_predefined("any", "mail", 1, "");
-		$obj_user->data["telephonenumber"]	= security_form_input_predefined("any", "telephonenumber", 1, "");
-		$obj_user->data["title"]		= security_form_input_predefined("any", "title", 1, "");
-		$obj_user->data["description"]		= security_form_input_predefined("any", "description", 1, "");
 	}
 	else
 	{
@@ -67,10 +63,6 @@ if (user_permissions_get('ldapadmins'))
 		$obj_user->data["gidnumber"]		= security_form_input_predefined("int", "gidnumber", 0, "");
 		$obj_user->data["loginshell"]		= security_form_input_predefined("any", "loginshell", 1, "");
 		$obj_user->data["homedirectory"]	= security_form_input_predefined("any", "homedirectory", 0, "");
-		$obj_user->data["mail"]			= security_form_input_predefined("any", "mail", 0, "");
-		$obj_user->data["telephonenumber"]	= security_form_input_predefined("any", "telephonenumber", 0, "");
-		$obj_user->data["title"]		= security_form_input_predefined("any", "title", 0, "");
-		$obj_user->data["description"]		= security_form_input_predefined("any", "description", 0, "");
 	}
 
 
