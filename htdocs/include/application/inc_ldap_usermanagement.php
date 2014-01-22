@@ -185,6 +185,10 @@ class ldap_auth_manage_user
 			$this->data["loginshell"]	= $this->obj_ldap->data[0]["loginshell"][0];
 			$this->data["homedirectory"]	= $this->obj_ldap->data[0]["homedirectory"][0];
 			$this->data["userpassword"]	= $this->obj_ldap->data[0]["userpassword"][0];
+			$this->data["mail"]		= $this->obj_ldap->data[0]["mail"][0];
+			$this->data["telephonenumber"]	= $this->obj_ldap->data[0]["telephonenumber"][0];
+			$this->data["title"]		= $this->obj_ldap->data[0]["title"][0];
+			$this->data["description"]	= $this->obj_ldap->data[0]["description"][0];
 
 			// fetch object classes - useful for when dealing with legacy users
 			for ($i=0; $i < $this->obj_ldap->data[0]["objectclass"]["count"]; $i++)
