@@ -89,31 +89,6 @@ class page_output
 		$structure["options"]["req"]	= "yes";
 		$structure["options"]["label"]	= " <i>(leave blank for automatic generation)</i>";
 		$this->obj_form->add_input($structure);
-		
-		$structure = NULL;
-                $structure["fieldname"]         = "mail";
-                $structure["type"]                = "input";
-                $structure["options"]["req"]        = "no";
-                $this->obj_form->add_input($structure);
-                
-                $structure = NULL;
-                $structure["fieldname"]         = "telephonenumber";
-                $structure["type"]                = "input";
-                $structure["options"]["req"]        = "no";
-                $this->obj_form->add_input($structure);
-                
-                $structure = NULL;
-                $structure["fieldname"]         = "title";
-                $structure["type"]                = "input";
-                $structure["options"]["req"]        = "no";
-                $this->obj_form->add_input($structure);
-                
-                $structure = NULL;
-                $structure["fieldname"]           = "description";
-                $structure["type"]                = "textarea";
-                $structure["options"]["height"]   = "100";
-                $structure["options"]["req"]          = "no";
-                $this->obj_form->add_input($structure);
 				
 
 		// passwords	
