@@ -113,31 +113,6 @@ class page_output
 		$structure["options"]["req"]	= "yes";
 		$this->obj_form->add_input($structure);
 		
-		$structure = NULL;
-		$structure["fieldname"] 	= "mail";
-		$structure["type"]		= "input";
-		$structure["options"]["req"]	= "no";
-		$this->obj_form->add_input($structure);
-		
-		$structure = NULL;
-		$structure["fieldname"] 	= "telephonenumber";
-		$structure["type"]		= "input";
-		$structure["options"]["req"]	= "no";
-		$this->obj_form->add_input($structure);
-		
-		$structure = NULL;
-		$structure["fieldname"] 	= "title";
-		$structure["type"]		= "input";
-		$structure["options"]["req"]	= "no";
-		$this->obj_form->add_input($structure);
-		
-		$structure = NULL;
-		$structure["fieldname"] 	  = "description";
-		$structure["type"]                = "textarea";
-                $structure["options"]["height"]   = "100";
-		$structure["options"]["req"]	  = "no";
-		$this->obj_form->add_input($structure);
-		
 
 		// passwords
 		$structure = NULL;
@@ -197,10 +172,6 @@ class page_output
 				$this->obj_form->structure["gidnumber"]["defaultvalue"]		= $this->obj_user->data["gidnumber"];
 				$this->obj_form->structure["loginshell"]["defaultvalue"]	= $this->obj_user->data["loginshell"];
 				$this->obj_form->structure["homedirectory"]["defaultvalue"]	= $this->obj_user->data["homedirectory"];
-				$this->obj_form->structure["mail"]["defaultvalue"]		= $this->obj_user->data["mail"];
-				$this->obj_form->structure["telephonenumber"]["defaultvalue"]	= $this->obj_user->data["telephonenumber"];
-				$this->obj_form->structure["title"]["defaultvalue"]		= $this->obj_user->data["title"];
-				$this->obj_form->structure["description"]["defaultvalue"]	= $this->obj_user->data["description"];
 
 			}
 		}
